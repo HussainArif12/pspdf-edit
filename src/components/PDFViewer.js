@@ -24,8 +24,7 @@ export default function PDFViewer({ document }) {
         document: document,
         baseUrl: `${window.location.protocol}//${window.location.host}/`,
       });
-      //addSignatureFromURL({ PSPDFKit, instance, top: 10, left: 10 });
-      addSignatureFromCode({ PSPDFKit, instance });
+      addSignatureFromDisk({ PSPDFKit, instance });
     })();
 
     return () => PSPDFKit && PSPDFKit.unload(container);
